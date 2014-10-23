@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.colt.mwallet"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="Digital Wallet"
+        android:theme="@style/NoActionBar" >
+        <activity
+            android:name="com.colt.mwallet.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.colt.mwallet.CoinActivity"
+            android:label="@string/title_activity_coin" >
+        </activity>
+        <activity
+            android:name="com.colt.mwallet.SentActivity"
+            android:label="@string/title_activity_sent"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.colt.mwallet.ReceiveActivity"
+            android:label="@string/title_activity_receive" >
+        </activity>
+        <activity
+            android:name="com.colt.mwallet.BalanceActivity"
+            android:label="@string/title_activity_balance" >
+        </activity>
+        
+       
+    </application>
+
+</manifest>

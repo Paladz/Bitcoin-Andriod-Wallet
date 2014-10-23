@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <color name="Background">#f5f5dc</color>
+     <color name="CleanButton">#00000000</color>
+     <color name="ButtonCol">#A0522D</color>
+     <color name="gray"> #a8a8a8</color>
+     <color name="blue"> #287AA9</color>
+</resources>

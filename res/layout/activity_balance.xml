@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/Background"
+    tools:context=".BalanceActivity" >
+
+       <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/CleanButton" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageButton1"
+            android:layout_below="@+id/imageButton1"
+            android:text="Activity" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageButton2"
+            android:layout_below="@+id/imageButton2"
+            android:text="   Pay" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageButton3"
+            android:layout_below="@+id/imageButton3"
+            android:text="  Wallet" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageButton4"
+            android:layout_below="@+id/imageButton4"
+            android:text="   Main" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/CleanButton"
+            android:onClick="SetSelected"
+            android:src="@drawable/ic_set" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/imageButton4"
+            android:background="@color/CleanButton"
+            android:onClick="WalletSelected"
+            android:src="@drawable/ic_wallet" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView3"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/textView3"
+            android:background="@color/CleanButton"
+            android:onClick="TransactionSelected"
+            android:src="@drawable/ic_transfer" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/imageButton2"
+            android:background="@color/CleanButton"
+            android:onClick="ActivitySelected"
+            android:src="@drawable/ic_history" />
+
+    </RelativeLayout>
+    
+       
+     <RelativeLayout
+         android:id="@+id/relativeLayout3"
+         android:layout_width="fill_parent"
+         android:layout_height="380dp"
+         android:layout_marginTop="60dp"
+         android:clickable="true" >
+
+          <ListView
+              android:id="@+id/listView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentStart="true"
+              android:layout_alignParentTop="true"
+              android:cacheColorHint="@android:color/black"
+              android:choiceMode="singleChoice" >
+          </ListView>
+
+     </RelativeLayout>
+
+</RelativeLayout>

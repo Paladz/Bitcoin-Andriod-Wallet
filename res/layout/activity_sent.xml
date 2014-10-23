@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/Background"
+    tools:context=".SentActivity" >
+    
+     
+         <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/CleanButton" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageButton1"
+            android:layout_below="@+id/imageButton1"
+            android:text="Activity" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageButton2"
+            android:layout_below="@+id/imageButton2"
+            android:text="   Pay" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageButton3"
+            android:layout_below="@+id/imageButton3"
+            android:text="  Wallet" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageButton4"
+            android:layout_below="@+id/imageButton4"
+            android:text="   Main" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/CleanButton"
+            android:onClick="SetSelected"
+            android:src="@drawable/ic_set" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/imageButton4"
+            android:background="@color/CleanButton"
+            android:onClick="WalletSelected"
+            android:src="@drawable/ic_wallet" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView3"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/textView3"
+            android:background="@color/CleanButton"
+            android:onClick="TransactionSelected"
+            android:src="@drawable/ic_transfer" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/imageButton2"
+            android:background="@color/CleanButton"
+            android:onClick="ActivitySelected"
+            android:src="@drawable/ic_history" />
+
+    </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/relativeLayout3"
+          android:layout_width="fill_parent"
+          android:layout_height="220dp"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="139dp"
+          android:clickable="true" >
+
+          <EditText
+              android:id="@+id/amount"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignLeft="@+id/address"
+              android:layout_below="@+id/address"
+              android:layout_marginTop="17dp"
+              android:ems="12"
+              android:gravity="center"
+              android:hint="Amount"
+              android:maxLines="1"
+              android:textColor="@color/ButtonCol" >
+
+              <requestFocus />
+          </EditText>
+
+          <EditText
+              android:id="@+id/address"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="36dp"
+              android:ems="14"
+              android:gravity="center"
+              android:hint="Address"
+              android:maxLines="1"
+              android:onClick="addressclicked"
+              android:textColor="@color/ButtonCol" />
+
+          <ImageView
+              android:id="@+id/qr"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignTop="@+id/QRButton"
+              android:layout_toLeftOf="@+id/QRButton"
+              android:src="@drawable/ic_qron" />
+
+          <Button
+              android:id="@+id/paybutton"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBaseline="@+id/QRButton"
+              android:layout_alignBottom="@+id/QRButton"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="22dp"
+              android:background="@color/ButtonCol"
+              android:onClick="PaySelected"
+              android:text="Sent"
+              android:textColor="@color/Background" />
+
+          <Button
+              android:id="@+id/QRButton"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_marginBottom="19dp"
+              android:layout_marginRight="14dp"
+              android:layout_toLeftOf="@+id/paybutton"
+              android:background="@color/ButtonCol"
+              android:onClick="QRSelected"
+              android:text="QR Code"
+              android:textColor="@color/Background" />
+
+          <TextView
+              android:id="@+id/CoinType"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_toRightOf="@+id/amount"
+              android:text=" BTC"
+              android:textColor="@color/blue" />
+      </RelativeLayout>
+
+</RelativeLayout>
